@@ -10,14 +10,13 @@ public class Programa {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		double horasTrab,salHora,horaSemanal,horasExtra,custo,salHora1;
+		double horasTrab,salHora,horaSemanal,horasExtra,custo,salHoraExtra;
 		
 		System.out.print("Horas Trabalhadas por mês: ");
 		horasTrab = sc.nextDouble();
 		System.out.print("Salário por hora: ");
 		salHora = sc.nextDouble();
 		
-		salHora1 = salHora;
 		horaSemanal = horasTrab/4;
 		
 		if(horaSemanal <= 40) {
@@ -25,11 +24,11 @@ public class Programa {
 			
 		}else {
 			horasExtra = (horaSemanal - 40) * 4;
-			salHora = salHora*1.50;
-			custo = (horasExtra*salHora) + ((salHora1 * 40) * 4);
+			salHoraExtra = salHora*1.50;
+			custo = (horasExtra*salHoraExtra) + ((salHora * 40) * 4);
 			
 			}
-		System.out.println(custo);
+		System.out.printf("Custo : R$%.2f",custo);
 		sc.close();
 	}
 }
