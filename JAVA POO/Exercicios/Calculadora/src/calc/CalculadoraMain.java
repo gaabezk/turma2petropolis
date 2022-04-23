@@ -9,7 +9,7 @@ public class CalculadoraMain {
     	
     	Locale.setDefault(Locale.US);
     	     
-        Scanner leitor = new Scanner(System.in);
+    	Scanner leitor = new Scanner(System.in);
         
         System.out.print("Insira o primeiro número: ");
         double numero1 = leitor.nextDouble();
