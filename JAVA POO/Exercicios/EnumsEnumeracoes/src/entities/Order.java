@@ -46,11 +46,11 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order id: " 
-				+ id 
-				+ ", \nmoment: " 
-				+ moment 
-				+ ", \nstatus: " 
+		return "Order id: "
+				+ id
+				+ ", \nmoment: "
+				+ moment
+				+ ", \nstatus: "
 				+ status;
 	}
 	

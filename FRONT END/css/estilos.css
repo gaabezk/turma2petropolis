@@ -1,0 +1,22 @@
+h1{
+    font-family: Verdana
+}
+
+h2{
+    font-family: sans-serif;
+}
+
+.teste1{
+    color: red;
+    font-size: 24px;
+    font-family: Arial;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: solid;
+}
+.teste2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    line-height:  30px;
+    text-align:  left;
+}
