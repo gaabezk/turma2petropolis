@@ -1,6 +1,5 @@
 package br.com.serratec.entities;
 
-import java.util.Date;
 
 public class Musica {
 
@@ -18,14 +17,15 @@ public class Musica {
 
 	@Override
 	public String toString() {
-		return 	"Musica: "
+		return 	"\nMusica: "
 				+ nome
-				+ "\nCantor: "
+				+ "   Cantor: "
 				+ cantor
-				+ "\nProdutor: "
+				+ "   Produtor: "
 				+ produtor
-				+ "\nDuracao: "
-				+ duracao;
+				+ "   Duracao: "
+				+ duracao
+				+ "\n";
 	}
 	
 	

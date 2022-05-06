@@ -1,0 +1,19 @@
+*{
+    font-size: 20px;
+    
+}
+body{
+    background-color: aqua;
+    background-image: url(https://img.freepik.com/fotos-gratis/handdraw-resumo-para-walpaper-e-plano-de-fundo_528914-430.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+p{
+    color: #ffffff;
+}
+h2{
+    color: #007a9c;
+}
+.braba{
+    color: #009c17;
+}

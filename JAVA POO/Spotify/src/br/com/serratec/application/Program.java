@@ -5,11 +5,13 @@ import java.util.Scanner;
 
 import br.com.serratec.entities.Musica;
 import br.com.serratec.entities.PlayList;
+import br.com.serratec.entities.Video;
 
 public class Program {
 	
 	static Scanner sc = new Scanner(System.in);
 	static List<Musica> listaMusicas = new ArrayList();
+	static List<Video> listaVideos = new ArrayList();
 	static PlayList listaMusic;
 	
 	
@@ -20,27 +22,48 @@ public class Program {
 		continuar = menu();
 
 		}while(continuar);
-		System.out.println(listaMusic.getMusica());
+		System.out.println("\nLISTA DE MUSICAS CADASTRADAS NO SISTEMA\n"+listaMusicas);
+		System.out.println("\nLISTA DE VIDEOS CADASTRADAS NO SISTEMA\n"+listaVideos);
 		
 	}
 	
-	public static void cadastrarMusica() {
+	public static void cadastrarVideo() {
 			
 		
-			System.out.println("\n\n=========== Cadastre uma musica ===========");
-			System.out.print("Nome da musica: ");
-			String nomeMusica = sc.nextLine();
-			System.out.print("Cantor: ");
-			String nomeCantor = sc.nextLine();
-			System.out.print("Produtor: ");
-			String nomeProdutor = sc.nextLine();
-			System.out.print("Duração: ");
+			System.out.println("\n\n=========== Cadastre um Video ===========");
+			System.out.print("Nome do Video: ");
+			String nomeVideo = sc.nextLine();
+			System.out.print("Assunto: ");
+			String assunto = sc.nextLine();
+			System.out.print("Canal: ");
+			String canal = sc.nextLine();
+			System.out.print("Visualizações: ");
+			int visualizacao = sc.nextInt();
+			System.out.print("Duracao: ");
 			String duracao = sc.next();
 			System.out.println("===========================================");
 			
-			listaMusic = new PlayList(new Musica(nomeMusica,nomeCantor,nomeProdutor,duracao));
+			listaVideos.add(new Video(nomeVideo, assunto, canal, visualizacao, duracao));
 			
 		}
+	
+	public static void cadastrarMusica() {
+		
+		
+		System.out.println("\n\n=========== Cadastre uma Musica ===========");
+		System.out.print("Nome da Musica: ");
+		String nomeMusica = sc.nextLine();
+		System.out.print("Cantor: ");
+		String nomeCantor = sc.nextLine();
+		System.out.print("Produtor: ");
+		String nomeProdutor = sc.nextLine();
+		System.out.print("Duração: ");
+		String duracao = sc.next();
+		System.out.println("===========================================");
+		
+		listaMusicas.add(new Musica(nomeMusica, nomeCantor, nomeProdutor, duracao));
+		
+	}
 	
 	public static boolean menu() {
 		
@@ -59,6 +82,9 @@ public class Program {
 		switch(escolha) {
 		case 1:
 			cadastrarMusica();
+			break;
+		case 2:
+			cadastrarVideo();
 			break;
 		case 0:
 			return false;

@@ -1,0 +1,22 @@
+body{
+    font-size: 24px;
+    font-family: Arial;
+}
+
+h2{
+    border-width: thin;
+    border-color: rgb(185, 0, 0);
+    border-style: solid;
+
+}
+a{  /*shorthand*/
+    border: thick dashed red;
+    border-bottom:  5px solid green;
+}
+p{
+    width:  250px;
+    height: 250px;
+    border: 10px dotted black;
+    background-color: blueviolet;
+    border-radius: 180px 180px 180px 180px;
+}

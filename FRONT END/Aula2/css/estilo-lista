@@ -1,0 +1,15 @@
+body{
+    font-size: 20px;
+    font-family: Arial;
+
+}
+ul.menu{
+    list-style: none;
+    padding:  0;
+    margin: 0;
+}
+ul.menu{
+    display: inline-block;
+    border: 5px solid blue;
+    background-color: azure;
+}

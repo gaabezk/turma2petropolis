@@ -1,0 +1,21 @@
+#titulo{
+    background-color: aqua;
+
+}
+.destacar{
+    color: rgb(143, 255, 173);
+    background-color: green;
+    font-weight: bold;
+    font-family: Verdana;
+    font-style: italic;
+}
+.missao{
+    color: rgb(15, 255, 251);
+
+}
+.missao strong{
+    color: rgb(253, 239, 147);
+}
+.missao2 strong{
+    color: rgb(3, 0, 165);
+}
