@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(255, 239, 206);
+    text-align: center;
+}
+div{
+    
+}
+.empresa{
+    align-content: center;
+    width: 300px;
+    border: 12px solid green;
+    padding: 35px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin: 20px;
+    float: left;
+    background-color: antiquewhite;
+}
+p{
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: rgb(4, 4, 4);
+}

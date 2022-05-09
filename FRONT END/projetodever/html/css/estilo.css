@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+header{
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.container{
+    width: 300px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+
+}
+.imagem{
+    margin-top: -30px;
+    margin-left: -60px;
+}
+
+article{
+    padding-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20%;
+}
+
+
+article > h2{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 1;
+    margin: -10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+
+article > p{
+    text-align: justify;
+    font-size: 20px;
+    margin: 20px 0;
+}
+#planos{
+    padding: 80px;
+}
+
+#planos:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.botao{
+    background-color: green;
+    display: inline-block;
+    color: #fff;
+    padding: 12px 6px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.botao:hover, .botao:focus{
+    background-color: red;
+}

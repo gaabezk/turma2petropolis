@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+
+}
+body{
+    margin: 0;
+
+}
+header{
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(162, 176, 255);
+}
+
+.container{
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+article{
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 370px;
+    float: left;
+    margin-left: 30px;
+}
+article:last-child{
+    margin-left: 0px;
+    margin-right: 30px;
+}
+
+article > h2{
+    background-color: gray;
+    color: white;
+    text-align: center;
+    line-height: 2.5;
+    margin: -10px;
+    margin-bottom: 0px;
+    font-weight: normal;
+    font-size: 20px;
+}
+article > div{
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+article > ul{
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+article > ul > li{
+    text-align: center;
+}
+
+article > footer{
+    text-align: center;
+}
+
+#planos{
+    padding: 80px;
+}

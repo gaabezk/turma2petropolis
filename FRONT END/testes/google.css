@@ -1,0 +1,68 @@
+main{
+    background-color: rgb(155, 149, 149);
+    padding-top: 180px;
+    border-radius: 10px;
+    min-width: 280px;
+    max-width: 1200px;
+    margin: auto;
+    user-select: none;
+
+}
+div{
+    align-items: center;
+}
+
+img{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    
+}
+.pesquisa{
+    border-radius: 30px;
+    width:  580px;
+    height: 43px;
+    border: 1.2px solid rgb(134, 134, 134);
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.coe{
+    width: 15px;
+    margin-left: 15px;
+    margin-top: 14.6px;
+}
+.microfone{
+    width: 14px;
+    margin-right: 18px;
+    margin-top: -18px;
+}
+.keyb{
+    width: 22px;
+    height: 24px;
+    margin-right: 50px;
+    margin-top: -21.6px;
+}
+.botao1,.botao2{
+    display: inline-block;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    padding: 8px 11px;
+    color: #e8eaed;
+    background-color: #303134;
+    border: 1px solid #303134;
+    border-radius: 5px;
+    margin-top: 25px;
+    user-select: none;
+    cursor: pointer;
+}
+.botao1{
+    margin-left:547px;
+    margin-right: 10px;}
+.botao1:hover,.botao2:hover{
+    border: 1px solid #e8eaed;
+}
+.botao1::first-line{
+    border: 200px;
+}
