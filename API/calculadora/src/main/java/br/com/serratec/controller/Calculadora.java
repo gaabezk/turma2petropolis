@@ -1,5 +1,6 @@
-package br.com.serratec.calculadora;
+package br.com.serratec.controller;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Calculadora {
 
-    @RequestMapping("/calc")
-    public double calculo(@RequestParam double num1, @RequestParam String operador, @RequestParam double num2) {
+    @RequestMapping("/calc/{operador}/{num1}/{num2}")
+    public double calculo(@PathVariable double num1, @PathVariable String operador, @PathVariable double num2) {
 
         switch (operador) {
             case "soma":
