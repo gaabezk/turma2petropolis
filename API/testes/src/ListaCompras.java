@@ -1,20 +1,19 @@
-package br.com.serratec.model;
 
 public class ListaCompras {
 
     private int id;
     private String nomeProduto;
-    private int quatidade;
+    private int quantidade;
     private double valor;
 
     public ListaCompras(){
 
     }
 
-    public ListaCompras(int id, String nomeProduto, int quatidade, double valor) {
+    public ListaCompras(int id, String nomeProduto, int quantidade, double valor) {
         this.id = id;
         this.nomeProduto = nomeProduto;
-        this.quatidade = quatidade;
+        this.quantidade = quantidade;
         this.valor = valor;
     }
 
@@ -35,11 +34,11 @@ public class ListaCompras {
     }
 
     public int getQuatidade() {
-        return quatidade;
+        return quantidade;
     }
 
     public void setQuatidade(int quatidade) {
-        this.quatidade = quatidade;
+        this.quantidade = quatidade;
     }
 
     public double getValor() {
@@ -48,5 +47,15 @@ public class ListaCompras {
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        return "ListaCompras{" +
+                "id=" + id +
+                ", nomeProduto='" + nomeProduto + '\'' +
+                ", quantidade=" + quantidade +
+                ", valor=" + valor +
+                "}\n";
     }
 }
