@@ -83,10 +83,9 @@ public class ServiceConta {
                     return "Saque cancelado! o seu saldo é insuficiente! ";
                 }
             }
-            return "Conta Inválida!";
         }
-        return null;
-        }
+        return "Conta Inválida!";
+    }
 
     public String compra(Integer numeroConta, String tipo, Double valor){
         if (valor <= 0){
