@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "5eed0fe0-6adf-4626-819f-4a489ea6c477",
+		"name": "API banco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21008264"
+	},
+	"item": [
+		{
+			"name": "LISTAR CONTAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/conta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INSERIR CONTA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"numero\": 500,\r\n        \"titular\": \"Isabella Cristina Fernandes\",\r\n        \"saldo\": 1500.0,\r\n        \"limiteCred\": 2000.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta/insert",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTA POR ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/conta/111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDITAR POR ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"numero\": 500,\r\n        \"titular\": \"Isabella Cristina Fernandes\",\r\n        \"saldo\": 19600.0,\r\n        \"limiteCred\": 5000.0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta/380",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"380"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETAR POR ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/conta/380",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"380"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAQUE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/conta/saque/380/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"saque",
+						"380",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COMPRA CREDITO/DEBITO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/conta/compra/380/debito/20",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"compra",
+						"380",
+						"debito",
+						"20"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
