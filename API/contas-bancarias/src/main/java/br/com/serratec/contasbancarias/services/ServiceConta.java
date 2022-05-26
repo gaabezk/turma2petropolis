@@ -2,6 +2,8 @@ package br.com.serratec.contasbancarias.services;
 
 
 import br.com.serratec.contasbancarias.entity.Conta;
+import br.com.serratec.contasbancarias.exception.ContaInvalidaException;
+import br.com.serratec.contasbancarias.exception.OperacaoInvalidaException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,7 +12,7 @@ import java.util.List;
 @Service
 public class ServiceConta {
 
-    static List<Conta> listaContas = new ArrayList<Conta>();
+    public List<Conta> listaContas = new ArrayList<Conta>();
 
     public ServiceConta(){
         listaContas.add(new Conta(380,"Isabella Fernandes",9600.00,2000.00));
@@ -21,16 +23,16 @@ public class ServiceConta {
         return listaContas;
     }
 
-    public Conta retornarContaPorId(int numeroConta) {
+    public Conta retornarContaPorId(int numeroConta) throws ContaInvalidaException {
         for (Conta conta : listaContas) {
             if (conta.getNumero() == numeroConta) {
                 return conta;
             }
         }
-        return null;
+        throw new ContaInvalidaException();
     }
 
-    public static String addConta(Conta conta){
+    public String addConta(Conta conta){
         listaContas.add(conta);
         return "Foi inserido com sucesso";
     }
@@ -70,7 +72,7 @@ public class ServiceConta {
         return "Não há item com esse id para ser deletado";
     }
 
-    public String saque(int numeroConta, Double valorSaque) {
+    public String saque(int numeroConta, Double valorSaque) throws ContaInvalidaException {
         if (valorSaque <= 0){
             return "Valor Inválido!";
         }
@@ -84,10 +86,10 @@ public class ServiceConta {
                 }
             }
         }
-        return "Conta Inválida!";
+        throw new ContaInvalidaException();
     }
 
-    public String compra(Integer numeroConta, String tipo, Double valor){
+    public String compra(Integer numeroConta, String tipo, Double valor) throws ContaInvalidaException, OperacaoInvalidaException {
         if (valor <= 0){
             return "Valor Inválido!";
         }
@@ -103,7 +105,7 @@ public class ServiceConta {
                         }
                     }
                 }
-                return "Conta Inválida!";
+                throw new ContaInvalidaException();
 
             case "debito":
                 for (Conta conta : listaContas) {
@@ -116,9 +118,9 @@ public class ServiceConta {
                         }
                     }
                 }
-                return "Conta Inválida!";
+                throw new ContaInvalidaException();
         }
-        return "Operação Inválida";
+        throw new OperacaoInvalidaException();
     }
 }
 

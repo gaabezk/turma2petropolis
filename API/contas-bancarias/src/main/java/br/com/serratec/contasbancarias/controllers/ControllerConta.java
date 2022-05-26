@@ -2,6 +2,8 @@ package br.com.serratec.contasbancarias.controllers;
 
 
 import br.com.serratec.contasbancarias.entity.Conta;
+import br.com.serratec.contasbancarias.exception.ContaInvalidaException;
+import br.com.serratec.contasbancarias.exception.OperacaoInvalidaException;
 import br.com.serratec.contasbancarias.services.ServiceConta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +14,6 @@ import java.util.List;
 @RequestMapping("/conta")
 public class ControllerConta {
 
-
     @Autowired
     ServiceConta conta;
 
@@ -22,7 +23,7 @@ public class ControllerConta {
     }
 
     @GetMapping(path = "/{coe}")
-    public Conta listarContaPorId(@PathVariable(name = "coe") int numeroConta){
+    public Conta listarContaPorId(@PathVariable(name = "coe") int numeroConta) throws ContaInvalidaException {
         return conta.retornarContaPorId(numeroConta);
     }
 
@@ -42,12 +43,12 @@ public class ControllerConta {
     }
 
     @PutMapping("/saque/{numeroConta}/{valorSaque}")
-    public String sacar(@PathVariable int numeroConta ,@PathVariable Double valorSaque) {
+    public String sacar(@PathVariable int numeroConta ,@PathVariable Double valorSaque) throws ContaInvalidaException {
        return conta.saque(numeroConta,valorSaque);
     }
 
     @PutMapping("/compra/{numeroConta}/{tipo}/{valor}")
-    public String compra(@PathVariable Integer numeroConta, @PathVariable String tipo, @PathVariable Double valor){
+    public String compra(@PathVariable Integer numeroConta, @PathVariable String tipo, @PathVariable Double valor) throws ContaInvalidaException, OperacaoInvalidaException {
         return conta.compra(numeroConta,tipo,valor);
     }
 
