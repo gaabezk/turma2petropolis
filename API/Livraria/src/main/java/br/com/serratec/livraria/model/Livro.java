@@ -13,9 +13,7 @@ public class Livro {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idLivro;
-	
 	private String nomeLivro;
-
 	@ManyToOne
 	private Categoria categoriaLivro;
 	@JsonIgnore
